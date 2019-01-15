@@ -18,11 +18,11 @@
             wsgi.py
             __init__.py
 	    
-	__init__.py :- indicates Python interpreter that the directory is a Python package.<br>
-	settings.py :- store all of your Django project’s settings.<br>
-	urls.py :- store URL patterns for your project.<br>
-	wsgi.py :-  run your development server and deploy your project to a production environment.<br>
-	manage.py :- entry point for the REST API.<br>
+	__init__.py :- indicates Python interpreter that the directory is a Python package. <br>
+	settings.py :- store all of your Django project’s settings. <br>
+	urls.py :- store URL patterns for your project. <br>
+	wsgi.py :-  run your development server and deploy your project to a production environment. <br>
+	manage.py :- entry point for the REST API. <br>
 
 ### To create the new application of "app_name.
    `cd project_name`<br>
