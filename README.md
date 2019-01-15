@@ -1,42 +1,64 @@
 # Django-rest-framework
-### The Following commands to install Django framework in python (if you have python installed).
-1. `pip install Django`
-2. `pip install djangorestframework`
+#### The Following commands to install Django framework in python (if you have python installed).
+   `pip install Django`<br>
+   `pip install djangorestframework`
 
-### open cmd in the location where you want to have the API project
-## Installing django and djangorestframework
-pip install Django
-pip install djangorestframework
+#### To check Django version
+   `django.get_version()`
 
-## to check django version
-django.get_version() 
+#### Open cmd in the location where you want to have the REST API project
+   `django-admin startproject project_name`<br>
+    The following folder structure will be created under the folder project_name:
+    
+    project_name
+    │   manage.py
+    └───project_name
+            settings.py
+            urls.py
+            wsgi.py
+            __init__.py
+    
+    __init__.py : indicates Python interpreter that the directory is a Python package
+    settings.py : store all of your Django project’s settings.
+    urls.py     : store URL patterns for your project. 
+    wsgi.py     : run your development server and deploy your project to a production environment.
+    manage.py   : entry point for the REST API.
+    
 
-## To create a new Django Project of 'tango_with_django_project' name.
-python c:\python27\scripts\django-admin.py startproject tango_with_django_project
-django-admin startproject tango_with_django_project
-			tango_with_django_project
-					__init__.py :- indicates Python interpreter that the directory is a Python package.
-					settings.py :- store all of your Django project’s settings.
-					urls.py :- store URL patterns for your project.
-					wsgi.py :-  run your development server and deploy your project to a production environment.
-			manage.py
+#### To create the new application of "app_name.
+   `cd project_name`<br>
+   `django-admin startapp app_name`<br>
+   Note: If the above command is not working then try `python manage.py startapp app_name` <br>
+   The following folders/files will be added to the folder project_name:
+    
+    project_name
+    │   manage.py
+    │
+    ├───app_name
+    │   │   admin.py
+    │   │   apps.py
+    │   │   models.py
+    │   │   tests.py
+    │   │   views.py
+    │   │   __init__.py
+    │   │
+    │   └───migrations
+    │           __init__.py
+    │
+    └───project_name
+            settings.py
+            urls.py
+            wsgi.py
+            __init__.py
+	    
+	__init__.py: indicates Python interpreter that the directory is a Python package.<br>
+	models.py  : store your application’s data models - where you specify the entities and relationships between data<br>
+	tests.py   : store a series of functions to test your application’s code.<br>
+	views.py   : store a series of functions that take a clients’s requests and return responses.<br>
+	admin.py   : can register your models so that you can benefit from some Django machinery which creates an admin interface for you.
 
-
-## To create the new application of "newApp" name.
-python manage.py startapp newApp
-django-admin startapp newapp
-			tango_with_django_project
-			manage.py
-			newApp
-					__init__.py:- indicates Python interpreter that the directory is a Python package.
-					models.py:- store your application’s data models - where you specify the entities and relationships between data;
-					tests.py:- store a series of functions to test your application’s code.
-					views.py:- store a series of functions that take a clients’s requests and return responses.
-					admin.py:- can register your models so that you can benefit from some Django machinery which creates an admin interface for you
-
-## Django works on Model - view - Template (MVT) architectural design pattern 
-
-## After creating a new application , you need to add it in settings.py
+#### After creating a new application, you need to add `app_name` and `rest_framework` in settings.py
+```
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,35 +66,23 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'newApp',
+    'rest_framework',
+    'app_name',
 )
+```
 
-## Mapping URLs :- 
-You need to create a new file "urls.py" under application directory which allow you to map URLs for your application (e.g. http://www.tangowithdjango.com/rango/) to specific views.
+#### Create url.py inside the application
+You need to create a new file "urls.py" under application directory which allow you to map URLs with the project
 
-"""
-python manage.py makemigrations 
+#### Apply migrations
+    `python manage.py makemigrations`
+	
+ By running makemigrations, you’re asking Django that you have made changes to your models (in our case, when making new   application,creation of objects in model) and that you would like the changes to be stored as a migration.
 
-output:- 
-	Migrations for 'polls':
-	  0001_initial.py:
-		- Create model Question
-		- Create model Choice
-		- Add field question to choice
+    `python manage.py migrate`
 
-	By running makemigrations, you’re telling Django that you’ve made some changes to your models (in this case, you’ve made new ones) and that you’d like the changes to be stored as a migration.
-"""
+ migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables according to the database settings in your mysite/settings.py file and the database migrations shipped with the app."""
 
-
-
-"""
-python manage.py migrate
-
-migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables according to the database settings in your mysite/settings.py file and the database migrations shipped with the app.
-"""
-
-## To create lightweight development server
-python manage.py runserver 8080
-
-python manage.py createsuperuser --email admin@example.com --username admin
+#### Locate manage.py file and run the following command there to run the server.
+    `python manage.py runserver 8080`
 
