@@ -1,6 +1,6 @@
 # Django-rest-framework
 #### The Following commands to install Django framework in python (if you have python installed).
-   `pip install Django<br>
+   `pip install Django`<br>
    pip install djangorestframework`
 
 #### To check Django version
@@ -27,7 +27,7 @@
 
 #### To create the new application of "app_name.
    `cd project_name`<br>
-   `django-admin startapp app_name`
+   `django-admin startapp app_name`<br>
    Note: If the above command is not working then try `python manage.py startapp app_name` <br>
    The following folders/files will be added to the folder project_name:
     
@@ -51,11 +51,11 @@
             wsgi.py
             __init__.py
 	    
-	__init__.py:- indicates Python interpreter that the directory is a Python package.<br>
-	models.py:- store your application’s data models - where you specify the entities and relationships between data<br>
-	tests.py:- store a series of functions to test your application’s code.<br>
-	views.py:- store a series of functions that take a clients’s requests and return responses.<br>
-	admin.py:- can register your models so that you can benefit from some Django machinery which creates an admin interface for you.
+	__init__.py: indicates Python interpreter that the directory is a Python package.<br>
+	models.py  : store your application’s data models - where you specify the entities and relationships between data<br>
+	tests.py   : store a series of functions to test your application’s code.<br>
+	views.py   : store a series of functions that take a clients’s requests and return responses.<br>
+	admin.py   : can register your models so that you can benefit from some Django machinery which creates an admin interface for you.
 
 #### After creating a new application, you need to add `app_name` and `rest_framework` in settings.py
 ```
