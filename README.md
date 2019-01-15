@@ -1,6 +1,6 @@
 # Django-rest-framework
 ### The Following commands to install Django framework in python (if you have python installed).
-   `pip install Django`
+   `pip install Django`<br>
    `pip install djangorestframework`
 
 ### To check django version
@@ -57,7 +57,7 @@
 	admin.py:- can register your models so that you can benefit from some Django machinery which creates an admin interface for you. <br>
 
 ### After creating a new application, you need to add `app_name` and `rest_framework` in settings.py
-`INSTALLED_APPS = (
+INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -66,7 +66,7 @@
     'django.contrib.staticfiles',
     'rest_framework',
     'app_name',
-)`
+)
 
 ### Create url.py inside the application
 You need to create a new file "urls.py" under application directory which allow you to map URLs with the project
@@ -81,5 +81,5 @@ You need to create a new file "urls.py" under application directory which allow 
  migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables according to the database settings in your mysite/settings.py file and the database migrations shipped with the app."""
 
 ### Locate manage.py file and run the following command there to run the server.
-python manage.py runserver 8080
+    `python manage.py runserver 8080`
 
