@@ -3,10 +3,10 @@
    `pip install Django`<br>
    `pip install djangorestframework`
 
-#### To check django version
+#### To check Django version
    `django.get_version()`
 
-### Open cmd in the location where you want to have the REST API project
+#### Open cmd in the location where you want to have the REST API project
    `django-admin startproject project_name`<br>
     The following folder structure will be created under the folder project_name:
     
@@ -25,10 +25,10 @@
     manage.py   : entry point for the REST API.
     </p>
 
-### To create the new application of "app_name.
+#### To create the new application of "app_name.
    `cd project_name`<br>
    `django-admin startapp app_name`<br>
-   Note: If the above command is not working then try `python manage.py startapp app_name`<br>
+   Note: If the above command is not working then try `python manage.py startapp app_name` <br>
    The following folders/files will be added to the folder project_name:<br>
     
     project_name
@@ -57,7 +57,7 @@
 	views.py:- store a series of functions that take a clients’s requests and return responses.<br>
 	admin.py:- can register your models so that you can benefit from some Django machinery which creates an admin interface for you. <br>
 
-### After creating a new application, you need to add `app_name` and `rest_framework` in settings.py
+#### After creating a new application, you need to add `app_name` and `rest_framework` in settings.py
 ```
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -71,10 +71,10 @@ INSTALLED_APPS = (
 )
 ```
 
-### Create url.py inside the application
+#### Create url.py inside the application
 You need to create a new file "urls.py" under application directory which allow you to map URLs with the project
 
-### Apply migrations
+#### Apply migrations
     `python manage.py makemigrations`
 	
  By running makemigrations, you’re asking Django that you have made changes to your models (in our case, when making new   application,creation of objects in model) and that you would like the changes to be stored as a migration.
@@ -83,6 +83,6 @@ You need to create a new file "urls.py" under application directory which allow 
 
  migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables according to the database settings in your mysite/settings.py file and the database migrations shipped with the app."""
 
-### Locate manage.py file and run the following command there to run the server.
+#### Locate manage.py file and run the following command there to run the server.
     `python manage.py runserver 8080`
 
