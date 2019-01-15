@@ -1,15 +1,15 @@
 # Django-rest-framework
-### The Following commands to install Django framework in python (if you have python installed).
+#### The Following commands to install Django framework in python (if you have python installed).
    `pip install Django`<br>
    `pip install djangorestframework`
 
-### To check django version
+#### To check django version
    `django.get_version()`
 
 ### Open cmd in the location where you want to have the REST API project
    `django-admin startproject project_name`<br>
     The following folder structure will be created under the folder project_name:
-    
+    ```
     project_name
     │   manage.py
     └───project_name
@@ -17,12 +17,13 @@
             urls.py
             wsgi.py
             __init__.py
-	    
-	__init__.py :- indicates Python interpreter that the directory is a Python package. </br>
-	settings.py :- store all of your Django project’s settings. <br>
-	urls.py :- store URL patterns for your project. <br>
-	wsgi.py :-  run your development server and deploy your project to a production environment. <br>
-	manage.py :- entry point for the REST API. <br>
+    ```	    
+    what these files does is explained below:
+     ```__init__.py :- indicates Python interpreter that the directory is a Python package
+	settings.py :- store all of your Django project’s settings.
+	urls.py :- store URL patterns for your project.
+	wsgi.py :-  run your development server and deploy your project to a production environment.
+	manage.py :- entry point for the REST API.```
 
 ### To create the new application of "app_name.
    `cd project_name`<br>
@@ -57,6 +58,7 @@
 	admin.py:- can register your models so that you can benefit from some Django machinery which creates an admin interface for you. <br>
 
 ### After creating a new application, you need to add `app_name` and `rest_framework` in settings.py
+```
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -67,6 +69,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'app_name',
 )
+```
 
 ### Create url.py inside the application
 You need to create a new file "urls.py" under application directory which allow you to map URLs with the project
