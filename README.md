@@ -1,7 +1,7 @@
 # Django-rest-framework
 #### The Following commands to install Django framework in python (if you have python installed).
    `pip install Django`<br>
-   pip install djangorestframework`
+   `pip install djangorestframework`
 
 #### To check Django version
    `django.get_version()`
