@@ -9,7 +9,7 @@
 ### Open cmd in the location where you want to have the REST API project
    `django-admin startproject project_name`<br>
     The following folder structure will be created under the folder project_name:
-    ```
+    
     project_name
     │   manage.py
     └───project_name
@@ -17,13 +17,13 @@
             urls.py
             wsgi.py
             __init__.py
-    ```	    
-    what these files does is explained below:
-     ```__init__.py :- indicates Python interpreter that the directory is a Python package
-	settings.py :- store all of your Django project’s settings.
-	urls.py :- store URL patterns for your project.
-	wsgi.py :-  run your development server and deploy your project to a production environment.
-	manage.py :- entry point for the REST API.```
+    <p>
+    __init__.py : indicates Python interpreter that the directory is a Python package
+    settings.py : store all of your Django project’s settings.
+    urls.py     : store URL patterns for your project. 
+    wsgi.py     : run your development server and deploy your project to a production environment.
+    manage.py   : entry point for the REST API.
+    </p>
 
 ### To create the new application of "app_name.
    `cd project_name`<br>
