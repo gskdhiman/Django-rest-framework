@@ -86,3 +86,42 @@ You need to create a new file "urls.py" under application directory which allow 
 #### Locate manage.py file and run the following command there to run the server.
     python manage.py runserver 8080
 
+#### Make urls.py in the app_name folder to have app level URLS.
+The following will be now the folder structure
+
+	project_name
+	│   manage.py
+	│
+	├───app_name
+	│   │   admin.py
+	│   │   apps.py
+	│   │   models.py
+	│   │   tests.py
+	│   │ 	urls.py
+	│   │   views.py
+	│   │   __init__.py
+	│   │
+	│   └───migrations
+	│           __init__.py
+	│
+	└───project_name
+		settings.py
+		urls.py
+		wsgi.py
+		__init__.py
+		
+#### Add the app urls to main project by adding the following line in the urls.py at project level.
+
+	path('project/',include('app_name.urls')),
+
+Note: import include also. (from django.urls import path,include)<br>
+urls.py will look like this now.
+
+	from django.contrib import admin
+	from django.urls import path,include
+	from app_name.views import config
+
+	urlpatterns = [
+	    path('admin/', admin.site.urls),
+	    path('project/',include('app_name.urls')),
+	]
