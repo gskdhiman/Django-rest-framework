@@ -4,6 +4,7 @@
    `pip install djangorestframework`
 
 #### To check Django version
+   `import django`
    `django.get_version()`
 
 #### Open cmd in the location where you want to have the REST API project
