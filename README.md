@@ -126,3 +126,6 @@ urls.py will look like this now.
 	    path('admin/', admin.site.urls),
 	    path('project/',include('app_name.urls')),
 	]
+	
+#### add the views for the application.
+    Please have a look at views.py file in app_name folder and the corresponding URLs in url.py	
